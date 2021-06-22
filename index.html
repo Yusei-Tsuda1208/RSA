@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSA暗号</title>
+    <link rel="stylesheet" href="rsa.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <h1>RSA暗号</h1>
+    <a href="sousin.html">送信者側の方はこちら</a>
+    <h2>・受信者側の準備<i class="far fa-envelope"></i></h2>
+    <p>素数を2つ入力してください(4桁）</p> 
+    <input type ="text" id = "Pn1" class="sosuu" maxlength="4" onInput="checkForm(this)">
+    <input type ="text" id = "Pn2" class="sosuu" maxlength="4" onInput="checkForm(this)"></br></br>
+    <button id = "sakusei" type = "button" class="button">最小公倍数計算</button></br></br>
+    最小公倍数L=<input type ="text" id = "lcm" class="angou" ></br>
+    <p>Max{p,q}＜e＜LかつLと互いに素な数eを入力してください</p>
+    <input type ="text" id = "e" class="angou" onInput="checkForm(this)"></br></br>
+
+    <button id = "koukaib" type = "button" class="button">公開鍵計算</button></br>
+    <p>公開鍵は</p>
+    n=<input type ="text" id = "nkoukai" class="koukai" ></br>
+    e=<input type ="text" id = "ekoukai" class="koukai" ></br>
+
+    <h2>・受信者側復号化<i class="far fa-envelope"></i></h2>
+    <p>※復号する際、上記の要素が必要になるので、上の情報も入力してください</p></br>
+
+    <button id = "d" type = "button" class="button">復号鍵計算</button></br></br>
+    復号鍵は<input type ="text" id = "hukugoukey" class="angou" ></br>
+
+    <p>復号したい文字を入力してください</p>
+    <input type ="text" id = "fukugou" class="angou" ></br>
+    </br><button id = "hukugou" type = "button" class="button">復号</button></br></br>
+    復号した結果➜<input type ="text" id = "last" class="angou" ></br>
+
+
+    <script src = "rsa.js"></script>
+</body>
+</html>

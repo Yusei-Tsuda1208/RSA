@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送信者側</title>
+    <link rel="stylesheet" href="sousin.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <h1>RSA暗号</h1>
+    <a href="rsa.html">受信者側の方はこちら</a>
+    <h2>・送信者暗号化<i class="fas fa-paper-plane"></i></h2>
+    <p>公開鍵を入力してください </p></br>
+    <p>n=</p><input type ="text" id = "n2" class="angou" onInput="checkForm(this)"></br>
+    <p>e=</p><input type ="text" id = "e2" class="angou" onInput="checkForm(this)"></br>
+
+
+    <p>平文を入力してください（3文字)</p>
+    <input type ="text" id = "normal" class="in-normal" ></br>
+
+    <button id = "angou" type = "button" class="button">暗号化</button></br>
+    <p>作成した暗号は</p>
+    <input type ="text" id = "fangou" class="in-normal" maxlength="3"></br>
+
+    <script src = "sousin.js"></script>
+</body>
+</html>
